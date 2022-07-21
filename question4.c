@@ -1,18 +1,15 @@
-/*Write a program to check whether a given number is an even number or an odd
-number without using % operator.*/
+// Write a program to print the first 10 odd natural numbers.
 #include<stdio.h>
 int main()
 {
-    int num, result;
-    printf("enter a number ");
-    scanf("%d",&num);
-    result=num&1;
-    if(result==1)
-    printf("number is odd",result);
-    else
-    printf("number is even",result);
-    return 0;
-
-
-
+    int i=1;
+    while (i<=20)
+    {
+        if(i%2==0)
+        printf(" ");
+        else
+        printf("\n%d",i);
+        i++;
+    }
+    
 }

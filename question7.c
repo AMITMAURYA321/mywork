@@ -1,28 +1,12 @@
-/* Write a program to check whether a given year is a leap year or not.*/
+// Write a program to print the first 10 even natural numbers in reverse order.
 #include<stdio.h>
 int main()
 {
-    int year;
-    printf("enter a year ");
-    scanf("%d",&year);
-    if(year%100==0)
+    int num=10;
+    while (num>=1)
     {
-        if(year%400==0)
-
-          printf("leap year");
-          else
-          printf("non leap year");
+        printf("\n%d",num*2);
+        num--;
     }
-    else
-    {
-
-        if(year%4==0)
-
-            printf("leap year");
-            else
-            printf("non leap year");
-
-
-    }
-
+    
 }

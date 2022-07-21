@@ -1,15 +1,15 @@
-/* Write a program to check whether a given number is a three-digit number or not.*/
+// Write a program to print the first 10 odd natural numbers in reverse order.
 #include<stdio.h>
 int main()
 {
-    int number;
-    printf("enter a nmber");
-    scanf("%d",&number);
-    if(number>99&&number<1000)
-    printf("three digit number");
-    if(99>number)
-    printf("two digit number");
-    if (number>999)
-    printf("error this number more than three digits");
-    return 0 ;
+    int i=20;
+    while (i>=1)
+    {
+        if(i%2==0)
+        printf(" ");
+        else
+        printf("\n%d",i);
+        i--;
+    }
+    
 }
