@@ -1,12 +1,13 @@
-// Write a program to print a table of 5.
+// Write a program to print a table of N.
 #include<stdio.h>
 int main()
 {
-    int num=1;
-    while (num<=10)
+    int num,i;
+    printf("enter a table number");
+    scanf("%d",&num);
+    for(i=1;i<=10;i++)
     {
-        printf("\n5 x %d = %d",num,num*5);
-        num++;
+        printf("\n%d x %d = %d ",num,i,i*num);
     }
-    
+    return 0;
 }

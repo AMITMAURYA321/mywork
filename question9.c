@@ -1,12 +1,10 @@
-// Write a program to print cubes of the first 10 natural numbers.
+//Write a program to print cubes of the first N natural numbers.
 #include<stdio.h>
 int main()
 {
-    int num=1;
-    while (num<=10)
-    {
-        printf("\n%d",num*num*num);
-        num++;
-    }
-    
+    printf("enter a value");
+    int num,i;
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    printf("\n%d",i*i*i);
 }

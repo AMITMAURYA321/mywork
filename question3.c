@@ -1,12 +1,10 @@
-// Write a program to print the first 10 natural numbers in reverse order.
+// Write a program to print the first N natural numbers in reverse order.
 #include<stdio.h>
 int main()
 {
-    int i=10;
-    while (i>=1)
-    {
-        printf("\n%d",i);
-        i--;
-    }
-    
+    printf("enter a value\n");
+    int num,i;
+    scanf("%d",&num);
+    for(i=1;i<=num;num--)
+    printf("\n%d",num);
 }

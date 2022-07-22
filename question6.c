@@ -1,16 +1,13 @@
-/*Write a program to print greater between two numbers. Print one number of both are
-the same.*/
+// Write a program to print the first N even natural numbers
 #include<stdio.h>
 int main()
 {
-    int num1,num2;
+    int num,i;
     printf("enter a number");
-    scanf("%d%d",&num1,&num2);
-    if(num1>num2)
-    printf("greater number %d",num1);
-    if(num2>num1)
-    printf("greater number %d",num2);
-    if(num1==num2)
-    printf(" greater number%d",num1);
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    {
+        printf("\n%d",i*2);
+    }
     return 0;
 }

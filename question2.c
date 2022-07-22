@@ -1,12 +1,10 @@
-// Write a program to print the first 10 natural numbers.
-#include <stdio.h>
+// Write a program to print the first N natural numbers.
+#include<stdio.h>
 int main()
 {
-    int i=1;
-    while(i<=10)
-    {
-       printf("\n%d",i);
-       i++;
-    }
-    return 0;
+    printf("enter a value");
+    int num,i;
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    printf("\n%d",i);
 }

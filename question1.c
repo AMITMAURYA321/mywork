@@ -1,13 +1,19 @@
-// Write a program to print MySirG 5 times on the screen.
-#include <stdio.h>
+// Write a program to print hello world N times on the screen.
+#include<stdio.h>
 int main()
 {
-    int i=1;
-    while (i<=5)
+    printf("How many times would you like to print hello world\n\n");
+
+    printf("enter a number value");
+
+    int num ,i;
+    scanf("%d",&num);
+    for (i=1;i<=num;i++)
     {
-        printf("\nMySirG");
-        i++;
+        printf("\nhello world");
     }
-    return 0;
     
+
+
+
 }

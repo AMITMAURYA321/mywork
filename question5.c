@@ -1,15 +1,14 @@
-// Write a program to print the first 10 odd natural numbers in reverse order.
+// Write a program to print the first N odd natural numbers in reverse order.
 #include<stdio.h>
 int main()
 {
-    int i=20;
-    while (i>=1)
+    int num,i;
+    printf("enter a number");
+    scanf("%d",&num);
+    for(i=1;i<=num;num--)
     {
-        if(i%2==0)
-        printf(" ");
-        else
-        printf("\n%d",i);
-        i--;
+      printf("\n%d",num*2-1);
     }
+    return 0;
     
 }
