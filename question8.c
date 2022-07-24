@@ -1,10 +1,23 @@
-// Write a program to print squares of the first N natural numbers
+/*Write a program to check whether a given number is a Prime number or
+not*/
 #include<stdio.h>
 int main()
 {
-    printf("enter a value");
-    int num,i;
+    int num,i,ironman=0;
+    printf("enter a number");
     scanf("%d",&num);
-    for(i=1;i<=num;i++)
-    printf("\n%d",i*i);
+    for(i=2;i<num;i++)
+    {
+        if(num%i==0)
+        {
+          ironman=1;
+          break;
+        }
+    }
+    if(ironman==1)
+    
+        printf("not prime");
+        else
+        printf("prime number");
+    
 }

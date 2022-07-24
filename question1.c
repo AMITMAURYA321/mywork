@@ -1,19 +1,14 @@
-// Write a program to print hello world N times on the screen.
+// Write a program to calculate sum of first N natural numbers.
 #include<stdio.h>
 int main()
 {
-    printf("How many times would you like to print hello world\n\n");
-
-    printf("enter a number value");
-
-    int num ,i;
+    int num,i,s=0;
+    printf("entera  number");
     scanf("%d",&num);
-    for (i=1;i<=num;i++)
+    for(i=1;i<=num;i++)
     {
-        printf("\nhello world");
+        s=s+i;
     }
-    
-
-
-
+    printf("%d",s);
+    return 0;
 }

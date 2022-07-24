@@ -1,13 +1,18 @@
-// Write a program to print a table of N.
+// Write a program to reverse a given number.
 #include<stdio.h>
 int main()
 {
-    int num,i;
-    printf("enter a table number");
+    int num,i,remender,reverse=0;
+    printf("enter a number\n");
     scanf("%d",&num);
-    for(i=1;i<=10;i++)
+    while (num!=0)
     {
-        printf("\n%d x %d = %d ",num,i,i*num);
+        remender=num%10;
+        num=num/10;
+        reverse=reverse*10+remender;
     }
+    printf("reverse is %d",reverse);
     return 0;
+    
+
 }
