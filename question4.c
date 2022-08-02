@@ -1,13 +1,16 @@
-//Write a program to print the first N odd natural numbers.
+//Write a program to calculate HCF of two numbers
 #include<stdio.h>
 int main()
 {
-    int num,i;
-    printf("entre a number");
-    scanf("%d",&num);
-    for(i=1;i<=num;i++)
+    int num1,num2,i, hcf=1;
+    printf("enter a two number");
+    scanf("%d%d",&num1,&num2);
+    int min =num1<num1?num1:num2;
+    for(i=1;i<=min;i++)
     {
-        printf("\n%d",i*2-1);
+         if((num1%i==0) && (num2%i==0))
+         hcf=i;
     }
+    printf(" HCF IS %d", hcf);
     return 0;
 }

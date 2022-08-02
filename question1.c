@@ -1,14 +1,18 @@
-// Write a program to calculate sum of first N natural numbers.
-#include<stdio.h>
+// Write a program to print first N terms of Fibonacci series
+#include <stdio.h>
 int main()
 {
-    int num,i,s=0;
-    printf("entera  number");
-    scanf("%d",&num);
-    for(i=1;i<=num;i++)
+    int num, a = 0, b = 1, Fibonnaci, i,total;
+    printf("enter a number");
+    scanf("%d", &num);
+    printf("0 ");
+    printf("1 ");
+    for (i = 1; i < num; i++)
     {
-        s=s+i;
+        Fibonnaci = a + b;
+        printf("%d ", Fibonnaci);
+        a=b;
+        b=Fibonnaci;
     }
-    printf("%d",s);
-    return 0;
+        
 }

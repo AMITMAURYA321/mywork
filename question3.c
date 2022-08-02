@@ -1,13 +1,26 @@
-// Write a program to calculate sum of first N odd natural numbers.
-#include<stdio.h>
+/*Write a program to check whether a given number is there in the Fibonacci
+series or not.*/
+#include <stdio.h>
 int main()
 {
-    int num,i,s=0;
-    printf("enter a number\n");
-    scanf("%d",&num);
-    for(i=1;i<=num;i++)
+    int num, a = 0, b = 1, Fibonnaci, i,total;
+    printf("enter a number");
+    scanf("%d", &num);
+    for (i = 1;  1; i++)
     {
-        s=s+i*2-1;
+        Fibonnaci = a + b;
+        a=b;
+        b=Fibonnaci;
+        if(Fibonnaci==num)
+        {
+            printf("given number is there in the Fibonacci series ");
+            break;
+        }
+        if(Fibonnaci>num)
+        {
+            printf("given number is not there in the Fibonacci series");
+            break;
+        }
     }
-    printf("%d",s);
+        
 }

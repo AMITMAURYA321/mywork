@@ -1,23 +1,26 @@
-/*Write a program to check whether a given number is a Prime number or
-not*/
+// Write a program to find next Prime number of a given number.
 #include<stdio.h>
 int main()
 {
-    int num,i,ironman=0;
-    printf("enter a number");
-    scanf("%d",&num);
-    for(i=2;i<num;i++)
+    int number,find=0, num,i;
+    printf("entre a number");
+    scanf("%d",&number);
+    for(num=number;1;num++)
     {
-        if(num%i==0)
-        {
-          ironman=1;
-          break;
-        }
+    find=0;
+    for(i=2;i<=num/2;i++)
+    if(num%i==0)
+    {
+        find=1;
     }
-    if(ironman==1)
-    
-        printf("not prime");
-        else
-        printf("prime number");
-    
+    if(find==0)
+    {
+        printf("%d ",num);
+        break;
+        
+    }
+     
+    }
+    return 0;
 }
+

@@ -1,18 +1,23 @@
-// Write a program to reverse a given number.
+// Write a program to print all Armstrong numbers under 1000.
 #include<stdio.h>
 int main()
 {
-    int num,i,remender,reverse=0;
-    printf("enter a number\n");
-    scanf("%d",&num);
-    while (num!=0)
-    {
-        remender=num%10;
+    int num,rem,add,i;
+    printf("all Armstrong numbers under 1000\n");
+    for(i=1;i<=1000;i++)
+    { 
+      add=0;
+      num=i;
+      while (num!=0)
+      {
+        rem=num%10;
+        add=(rem*rem*rem)+add;
         num=num/10;
-        reverse=reverse*10+remender;
+      }
+      if(add==i)
+      printf("%d\n",i);
     }
-    printf("reverse is %d",reverse);
-    return 0;
-    
-
+      return 0;
+   
 }
+    

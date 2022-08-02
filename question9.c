@@ -1,14 +1,21 @@
-//  Write a program to calculate LCM of two numbers
+/*Write a program to check whether a given number is an Armstrong number
+or not*/
 #include<stdio.h>
 int main()
 {
-    int num1,num2,i;
-    printf("enter a two number");
-    scanf("%d %d",&num1,&num2);
-    for(i=1;i<num1*num2;i++)
-    if((i%num1==0)&&(i%num2==0))
+    int num,rem,add=0,c;
+    printf("entre a number");
+    scanf("%d",&num);
+    c=num;
+    while (num>0)
     {
-        break;
+      rem=num%10;
+      add=(rem*rem*rem)+add;
+      num=num/10;
     }
-    printf("LCM  %d ==>",i);
+    if(c==add)
+    printf("given number is an Armstrong number");
+    else
+    printf("given number is not an Armstrong number");
+    
 }
