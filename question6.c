@@ -1,20 +1,28 @@
-// Write a program to print all Prime numbers under 100
+ /*
+ Write a program to draw the following patterns:
+ *********
+  ******* 
+   *****  
+    ***   
+     *    
+
+*/
+
 #include<stdio.h>
 int main()
 {
-    int num=100,i ,find=0;
-    printf("all Prime numbers under 100\n");
-    for(num=2;num<=100;num++)
+    int i;
+    for(i=1;i<=5;i++)
     {
-        find=0;
-    for(i=2;i<=num/2;i++)
-    if(num%i==0)
-    {
-        find=1;
-    }
-    if(find==0)
-    printf("%d ",num); 
+        int j;
+        for(j=1;j<=9;j++)
+       {
+          if(j>=i&&j<=10-i)
+          printf("*");
+          else
+          printf(" ");
+        }
+         printf("\n");
     }
     return 0;
-
 }

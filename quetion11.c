@@ -1,30 +1,31 @@
 /*
-  Write a program to draw the following patterns:
-     1    
-    121
-   12321
-  1234321
- 123454321
+ Write a program to draw the following patterns:
+         A
+       A B A
+     A B C B A
+   A B C D C B A
+ A B C D E D C B A
 
 */
+
 #include<stdio.h>
 int main()
 {
     int i,j,k;
     for(i=1;i<=5;i++)
     {
-        k=1;
+        k='A';
         for(j=1;j<=9;j++)
         
        {
           if(j>=6-i&&j<=4+i)
             {
-                printf("%d",k);
+                printf("%c ",k);
                 j<5?k++:k--;
 
             }
           else
-          printf(" ");
+          printf("  ");
         }
          printf("\n");
     }

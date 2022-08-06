@@ -1,21 +1,29 @@
-/*Write a program to check whether a given number is an Armstrong number
-or not*/
+/*
+ Write a program to draw the following patterns:
+ 123454321
+  1234321
+   12321
+    121
+     1
+*/   
 #include<stdio.h>
 int main()
 {
-    int num,rem,add=0,c;
-    printf("entre a number");
-    scanf("%d",&num);
-    c=num;
-    while (num>0)
+    int i,k,j;
+    for(i=1;i<=5;i++)
     {
-      rem=num%10;
-      add=(rem*rem*rem)+add;
-      num=num/10;
+        k=1;
+        for(j=1;j<=9;j++)
+       {
+          if(j>=i&&j<=10-i)
+           {
+               printf("%d",k);
+               j<5?k++:k--;
+           }
+          else
+          printf(" ");
+        }
+         printf("\n");
     }
-    if(c==add)
-    printf("given number is an Armstrong number");
-    else
-    printf("given number is not an Armstrong number");
-    
+    return 0;
 }

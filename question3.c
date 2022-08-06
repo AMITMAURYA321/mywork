@@ -1,26 +1,26 @@
-/*Write a program to check whether a given number is there in the Fibonacci
-series or not.*/
-#include <stdio.h>
+/* 
+ 3 Write a program to draw the following patterns:
+*****
+****
+***
+**
+*
+*/
+#include<stdio.h>
 int main()
 {
-    int num, a = 0, b = 1, Fibonnaci, i,total;
-    printf("enter a number");
-    scanf("%d", &num);
-    for (i = 1;  1; i++)
+    int i;
+    for(i=1;i<=5;i++)
     {
-        Fibonnaci = a + b;
-        a=b;
-        b=Fibonnaci;
-        if(Fibonnaci==num)
-        {
-            printf("given number is there in the Fibonacci series ");
-            break;
+        int j;
+        for(j=1;j<=5;j++)
+       {
+          if(j<=6-i)
+          printf("*");
+          else
+          printf(" ");
         }
-        if(Fibonnaci>num)
-        {
-            printf("given number is not there in the Fibonacci series");
-            break;
-        }
+         printf("\n");
     }
-        
+    return 0;
 }

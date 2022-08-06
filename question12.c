@@ -1,13 +1,32 @@
-/* Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and
-convert it into USD.*/
-#include<stdio.h>
-int mian()
-{
-    int amount,usd;
-    printf("enter rupee amount");
-    scanf("%d",&amount);
-    usd=amount*76.23;
-    printf("covert in usd = %d",usd);
-    return 0;
+/*
+   Write a program to draw the following patterns:
 
+   ABCDEDCBA
+    ABCDCBA 
+     ABCBA  
+      ABA   
+       A  
+*/
+
+
+#include<stdio.h>
+int main()
+{
+    int i,k,j;
+    for(i=1;i<=5;i++)
+    {
+        k='A';
+        for(j=1;j<=9;j++)
+       {
+          if(j>=i&&j<=10-i)
+           {
+               printf("%c",k);
+               j<5?k++:k--;
+           }
+          else
+          printf(" ");
+        }
+         printf("\n");
+    }
+    return 0;
 }

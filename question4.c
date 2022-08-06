@@ -1,16 +1,27 @@
-//Write a program to calculate HCF of two numbers
+ /*
+   4 Write a program to draw the following patterns:
+      *    
+     ***   
+    *****  
+   ******* 
+  *********
+ */     
+     
 #include<stdio.h>
 int main()
 {
-    int num1,num2,i, hcf=1;
-    printf("enter a two number");
-    scanf("%d%d",&num1,&num2);
-    int min =num1<num1?num1:num2;
-    for(i=1;i<=min;i++)
+    int i;
+    for(i=1;i<=5;i++)
     {
-         if((num1%i==0) && (num2%i==0))
-         hcf=i;
+        int j;
+        for(j=1;j<=9;j++)
+       {
+          if(j>=6-i&&j<=4+i)
+          printf("*");
+          else
+          printf(" ");
+        }
+         printf("\n");
     }
-    printf(" HCF IS %d", hcf);
     return 0;
 }

@@ -1,23 +1,37 @@
-// Write a program to print all Armstrong numbers under 1000.
+/*
+  Write a program to draw the following patterns:
+  
+  1 2 3 4 3 2 1 
+  1 2 3   3 2 1
+  1 2       2 1
+  1           1
+
+
+*/
 #include<stdio.h>
 int main()
 {
-    int num,rem,add,i;
-    printf("all Armstrong numbers under 1000\n");
-    for(i=1;i<=1000;i++)
-    { 
-      add=0;
-      num=i;
-      while (num!=0)
-      {
-        rem=num%10;
-        add=(rem*rem*rem)+add;
-        num=num/10;
-      }
-      if(add==i)
-      printf("%d\n",i);
+    int i,j,k;
+    for(i=1;i<=4;i++)
+    {
+        k=1;
+        for(j=1;j<=7;j++)
+       {
+          if(j<=5-i||j>=3+i)
+          {
+             printf("%d ", k);
+             j<4?k++:k--;
+          }
+          
+          else
+          {
+                printf("  ");
+                if(j==4)
+                k--;
+          }
+          
+        }
+         printf("\n");
     }
-      return 0;
-   
+    return 0;
 }
-    

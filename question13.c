@@ -1,17 +1,37 @@
-// Write a program to check whether a given number is divisible by 3 and divisible by 2.
+/*
+Write a program to draw the following patterns:
+
+A B C D C B A 
+A B C   C B A 
+A B       B A 
+A           A 
+
+*/
+
 #include<stdio.h>
 int main()
 {
-    int num;
-    printf("enter a number");
-    scanf("%d",&num);
-    if((num%3==0)&&(num%2==0))
+    int i,j,k;
+    for(i=1;i<=4;i++)
     {
-        printf("number divisible 3 and 2 ==> %d ",num);
-    }
-    else
-    {
-        printf("number not divisible 3 and 2 ==> %d ",num);
+        k='A';
+        for(j=1;j<=7;j++)
+       {
+          if(j<=5-i||j>=3+i)
+          {
+             printf("%c ", k);
+             j<4?k++:k--;
+          }
+          
+          else
+          {
+                printf("  ");
+                if(j==4)
+                k--;
+          }
+          
+        }
+         printf("\n");
     }
     return 0;
 }

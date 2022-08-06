@@ -1,20 +1,26 @@
-// Write a program to print all Prime numbers between two given numbers.
+/*
+ Write a program to draw the following patterns:
+ **** ****
+ ***   ***
+ **     **
+ *       * 
+ 
+*/
+
 #include<stdio.h>
 int main()
 {
-    int num1,num2,find,i,num;
-    printf("enter a two numbers");
-    scanf("%d%d",&num1,&num2);
-    for(num=num1;num<=num2;num++)
+    int i,j;
+    for(i=1;i<=5;i++)
     {
-    find=0;
-    for(i=2;i<=num/2;i++)
-    if(num%i==0)
-    {
-        find=1;
-    }
-    if(find==0)
-    printf("%d ",num); 
+        for(j=1;j<=9;j++)
+       {
+          if(j<=5-i||j>4+i)
+          printf("*");
+          else
+          printf(" ");
+        }
+         printf("\n");
     }
     return 0;
 }
