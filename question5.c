@@ -1,22 +1,33 @@
-/*Write a program to check whether two given numbers are co-prime
-numbers or not*/
+/* Program to check whether a year is a leap year or not. Using switch
+statement */
+
 #include<stdio.h>
 int main()
 {
-    int num1,num2,i, hcf=1;
-    printf("enter a two number");
-    scanf("%d%d",&num1,&num2);
-    int min =num1<num2?num1:num2;
-    for(i=1;i<=min;i++)
+    int year;
+    printf("ENTER A YEAR\n");
+    scanf("%d",&year);
+    switch (year%100==0)
     {
-         if((num1%i==0) && (num2%i==0))
-         hcf=i;
+     case 1: switch (year%400==0)
+        {
+             case 0:
+             printf("LEAP YEAR");
+             break;
+             case 1:
+             printf("NON LEAP YEAR");
+             break;
+        }break;
+     case 0: switch(year%4==0)
+        {
+             case 1:
+             printf("LEAP YEAR");
+             break;
+             case 0:
+             printf("NON LEAP YEAR");
+             break;
+        }
+        
+    
     }
-    if(hcf==1)
-    printf("%d and %d co-prime number",num1,num2);
-    else
-    {
-        printf("%d and %d not co-prime number",num1,num2);
-    }
-    return 0;
 }

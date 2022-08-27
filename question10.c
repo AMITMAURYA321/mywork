@@ -1,37 +1,31 @@
-/*
-  Write a program to draw the following patterns:
-  
-  1 2 3 4 3 2 1 
-  1 2 3   3 2 1
-  1 2       2 1
-  1           1
-
-
-*/
+/* C program to find all roots of a quadratic equation using switch case*/
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int i,j,k;
-    for(i=1;i<=4;i++)
+    int a,b,c,D;
+    float x,y;
+    printf("enter coefficient of x^2,x and constant tream\n");
+    scanf("%d%d%d",&a,&b,&c);
+    D=b*b-4*a*c;
+    switch(0>D)
     {
-        k=1;
-        for(j=1;j<=7;j++)
-       {
-          if(j<=5-i||j>=3+i)
-          {
-             printf("%d ", k);
-             j<4?k++:k--;
-          }
-          
-          else
-          {
-                printf("  ");
-                if(j==4)
-                k--;
-          }
-          
-        }
-         printf("\n");
+     case 1:printf("both are imaginary");
+     break;
     }
-    return 0;
+    switch(0==D)
+    {
+       case 2: printf("both are equal");
+        x=-b/(2.0*a);   
+        break;
+    }
+    switch(0<D)
+    {
+     case 3: printf("roots are real and destinct");
+     x=(-b+sqrt(D)/(2*a));
+     y=(-b-sqrt(D)/(2*a));
+     printf("\n roots are: %f,%f",x,y); 
+     break;
+    }
+    return 0 ;
 }
