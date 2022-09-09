@@ -1,39 +1,18 @@
-/*Write a function to print PASCAL Triangle. (TSRN)*/
+// Write a recursive function to print binary of a given decimal number.
 #include<stdio.h>
-int factorial(int);
-int combination(int,int);
-void pascal(int);
+void binary_of_a_given_decimal_number(int n);
 int main()
-{  
-    int num1;
+{
+    int num;
     printf("enter a number");
-    scanf("%d",&num1);
-    pascal(num1);
-    return 0;    
+    scanf("%d",&num);
+    binary_of_a_given_decimal_number(num);
+    return 0;
 }
-int factorial(int n)
+void binary_of_a_given_decimal_number(int n)
 {
-    int i,factorial=1;
-    for(i=1;i<=n;i++)
-    factorial=factorial*i;
-    return factorial;
-}
-int combination(int n,int r)
-{
-    return factorial(n)/(factorial(r)*factorial(n-r));
-}
-void pascal(int n)
-{
-    
-        int i,j;
-        for(i=0;i<=n;i++)
-        {
-            for(j=0;j<=i;j++)
-            {
-                printf("%d ",combination(i,j));
-            }
-            printf("\n");
-        }
-       
-
+    if(n==0)
+    return;
+    printf("%d",n&1);
+    binary_of_a_given_decimal_number(n>>1);
 }

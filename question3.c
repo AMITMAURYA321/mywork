@@ -1,24 +1,17 @@
-/*Write a function to check whether a given number is Prime or not. (TSRS)*/
-int prime(int);
+//Write a recursive function to print first N odd natural numbers
 #include<stdio.h>
+void odd_natural(int n);
 int main()
 {
-    int num1,i, total;
-    printf("enter a numbers\n=> ");
-    scanf("%d",&num1);
-    total=prime(num1);
-    if(i==total)
-    printf("this is not prime number");
-    else
-    printf("this is prime number");
+    int num;
+    printf("enter a number\n=>");
+    scanf("%d",&num);
+    odd_natural(num);
 }
-int prime(int n)
-{ 
-    int i;
-    for(i=2;i<=n;i++)
-    {
-        if(n%i==0)
-        break;
-    }
-    return n==i;
+void odd_natural(int n)
+{
+    if(n==0)
+    return;
+    odd_natural(n-1);
+    printf("%d ",2*n-1);
 }

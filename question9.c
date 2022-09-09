@@ -1,17 +1,18 @@
-/*Write a program in C to find the square of any number using the function.*/
+// Write a recursive function to print octal of a given decimal number.
 #include<stdio.h>
-int square(int n);
+void octal_of_a_given_decimal_number(int n);
 int main()
 {
     int num;
     printf("enter a number");
-    scanf("%d",&num);8
-    printf("%d",square(num));
-
+    scanf("%d",&num);
+    octal_of_a_given_decimal_number(num);
+    return 0;
 }
-int square(int n)
+void octal_of_a_given_decimal_number(int n)
 {
-    int square;
-    square=n*n;
-    return square;
+    if(n==0)
+    return;
+    octal_of_a_given_decimal_number(n/8);
+    printf("%d",n%8);
 }

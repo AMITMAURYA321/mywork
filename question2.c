@@ -1,19 +1,17 @@
-/*Write a function to calculate HCF of two numbers. (TSRS)*/
-int hcf(int num1,int num2);
+//Write a recursive function to print first N natural numbers in reverse order
 #include<stdio.h>
+void natural_numbers_in_reverse(int n);
 int main()
 {
-    int a,b;
-    printf("enter a two numbers");
-    scanf("%d%d",&a,&b);
-    printf("%d",hcf(a,b));
-    return 0;
+    int num;
+    printf("enter a number\n=>");
+    scanf("%d",&num);
+    natural_numbers_in_reverse(num);
 }
-int hcf(int num1,int num2)
+void natural_numbers_in_reverse(int n)
 {
-    int h;
-    for(h=num1<num2?num1:num2;h>=1;h--)
-    if(num1%h==0&&num2%h==0)
-    break;
-    return h;  
+    if(n==0)
+    return;
+    printf("%d ",n);
+    natural_numbers_in_reverse(n-1);
 }

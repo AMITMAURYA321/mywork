@@ -1,21 +1,18 @@
-/* Write a function to calculate the factorial of a number. (TSRS)*/
+// Write a recursive function to print first N even natural numbers in reverse order.
 #include<stdio.h>
-int calculate_the_factorial(int num);
+void reverse_natural_numbers(int n);
 int main()
 {
-    int value,Factorial;
+    int num;
     printf("enter a number");
-    scanf("%d",&value);
-    Factorial=calculate_the_factorial(value);
-    printf("Factorial is %d",Factorial);
+    scanf("%d",&num);
+    reverse_natural_numbers(num);
+    return 0;
 }
-int calculate_the_factorial(int num)
-{ 
-    int f=1,i;
-     for(i=1;i<=num;num--)
-    {
-       f=f*num;
-    }
-     return f;
-
+void reverse_natural_numbers(int n)
+{
+    if(n==0)
+    return;
+    printf("%d ",n*2);
+    reverse_natural_numbers(n-1);
 }
