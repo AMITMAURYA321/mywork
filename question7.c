@@ -1,38 +1,28 @@
- /* Program to take the value from the user as input electricity unit charges
-    and calculate total electricity bill according to the given condition . Using
-    the switch statement.
-    For the first 50 units Rs. 0.50/unit
-    For the next 100 units Rs. 0.75/unit
-    For the next 100 units Rs. 1.20/unit
-    For units above 250 Rs. 1.50/unit
-    An additional surcharge of 20% is added to the bill. 
- */
-
+/* Write a function to calculate the number of combinations one can make from n items
+and r selected at a time. (TSRS)*/
 #include<stdio.h>
+int Factorial(int);
+int combination(int,int);
 int main()
 {
-    float x,amount,totalamount;
-    printf("enter a value\n");
-    scanf("%f",&x);
-    switch (x<=50)
-    {
-        case 1: amount=x*0.5;
-        break;
-        case 0: switch (x<=150)
-        {
-            case 1: amount=25+(x-50)*0.75;
-            break;
-            case 0:switch (x<=250)
-            {
-                case 1: amount = 100+(x-150)*1.20;
-                break;
-                case 0: amount=220 + (x-250)*1.5;
-                break;
-            
-            }break;
-        }break;
+   
+    int value,selected;
+    printf("enter a n vaalue\n");
+    scanf("%d",&value);
+    printf("selected at a time\n");
+    scanf("%d",&selected);
+    printf("%d",combination(value,selected));  
+    return 0;  
+}
 
-    }
-    totalamount = amount+amount*0.20;
-    printf("total amount = %f",totalamount);
+int Factorial(int n)
+{
+    int i,Factorial=1;
+    for(i=1;i<=n;n--)
+    Factorial=Factorial*n;
+    return Factorial;
+}
+int combination(int n,int r)
+{
+    return Factorial(n)/(Factorial(r)*Factorial(n-r));  
 }

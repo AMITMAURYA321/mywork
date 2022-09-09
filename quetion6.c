@@ -1,17 +1,21 @@
-// Write a program to calculate factorial of a number
-
+/* Write a function to calculate the factorial of a number. (TSRS)*/
 #include<stdio.h>
+int calculate_the_factorial(int num);
 int main()
 {
-    int num;
-    int factorial=1;
-    printf("entre a number");
-    scanf("%d",&num);
-    for(factorial=1;num>=1;num--)
+    int value,Factorial;
+    printf("enter a number");
+    scanf("%d",&value);
+    Factorial=calculate_the_factorial(value);
+    printf("Factorial is %d",Factorial);
+}
+int calculate_the_factorial(int num)
+{ 
+    int f=1,i;
+     for(i=1;i<=num;num--)
     {
-        factorial=factorial*num;
+       f=f*num;
     }
-    printf(" %d",factorial);
-    
-    return 0;
+     return f;
+
 }

@@ -1,29 +1,21 @@
-/*
- Write a program to draw the following patterns:
- 123454321
-  1234321
-   12321
-    121
-     1
-*/   
+/* Write a function to print all prime factors of a given number. For example, if the
+number is 36 then your result should be 2, 2, 3, 3. (TSRN)*/
 #include<stdio.h>
+int prime_factors(int n);
 int main()
 {
-    int i,k,j;
-    for(i=1;i<=5;i++)
+    int num;
+    printf("enter a number\n");
+    scanf("%d",&num);
+    prime_factors(num);
+}
+int prime_factors(int n)
+{
+    int i;
+    for(i=2;n!=1;i++)
+    while(n%i==0)
     {
-        k=1;
-        for(j=1;j<=9;j++)
-       {
-          if(j>=i&&j<=10-i)
-           {
-               printf("%d",k);
-               j<5?k++:k--;
-           }
-          else
-          printf(" ");
-        }
-         printf("\n");
+        n=n/i;
+        printf("%d,",i);
     }
-    return 0;
 }

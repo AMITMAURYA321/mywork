@@ -1,33 +1,19 @@
-/* Program to check whether a year is a leap year or not. Using switch
-statement */
-
+/* Write a function to print first N odd natural numbers. (TSRN)*/
 #include<stdio.h>
+int odd_natural_numbers(int);
 int main()
 {
-    int year;
-    printf("ENTER A YEAR\n");
-    scanf("%d",&year);
-    switch (year%100==0)
-    {
-     case 1: switch (year%400==0)
-        {
-             case 0:
-             printf("LEAP YEAR");
-             break;
-             case 1:
-             printf("NON LEAP YEAR");
-             break;
-        }break;
-     case 0: switch(year%4==0)
-        {
-             case 1:
-             printf("LEAP YEAR");
-             break;
-             case 0:
-             printf("NON LEAP YEAR");
-             break;
-        }
-        
-    
-    }
+    int value;
+    printf("enter a value");
+    scanf("%d",&value);
+    odd_natural_numbers(value);
+
+}
+int odd_natural_numbers(int num)
+{
+    int i;
+    for(i=1;i<=num;i++)
+
+        printf("%d\n",2*i-1);
+
 }

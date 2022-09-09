@@ -1,31 +1,25 @@
-/* C program to find all roots of a quadratic equation using switch case*/
+/* Write a function to check whether a given number contains a given digit or not.
+(TSRS)*/
 #include<stdio.h>
-#include<math.h>
+int contains(int, int);
 int main()
 {
-    int a,b,c,D;
-    float x,y;
-    printf("enter coefficient of x^2,x and constant tream\n");
-    scanf("%d%d%d",&a,&b,&c);
-    D=b*b-4*a*c;
-    switch(0>D)
-    {
-     case 1:printf("both are imaginary");
-     break;
-    }
-    switch(0==D)
-    {
-       case 2: printf("both are equal");
-        x=-b/(2.0*a);   
-        break;
-    }
-    switch(0<D)
-    {
-     case 3: printf("roots are real and destinct");
-     x=(-b+sqrt(D)/(2*a));
-     y=(-b-sqrt(D)/(2*a));
-     printf("\n roots are: %f,%f",x,y); 
-     break;
-    }
-    return 0 ;
+    int num1,digit;
+    printf("Enter a number\n");
+    scanf("%d",&num1);
+    printf("Enter a digits");
+    scanf("%d",&digit);
+    printf("%d",contains(num1,digit));
+    return 0;
+}
+int contains(int n, int d)
+{
+   int i,remnder;
+   for(i=1;i<=n;n++)
+   remnder=n%10;
+   if(remnder==d)
+   {
+    return 0;   
+   }
+   return 1;
 }
