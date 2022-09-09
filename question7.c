@@ -1,28 +1,17 @@
-/* Write a function to calculate the number of combinations one can make from n items
-and r selected at a time. (TSRS)*/
+/* Write a function to print first N terms of Fibonacci series (TSRN)*/
 #include<stdio.h>
-int Factorial(int);
-int combination(int,int);
 int main()
 {
-   
-    int value,selected;
-    printf("enter a n vaalue\n");
-    scanf("%d",&value);
-    printf("selected at a time\n");
-    scanf("%d",&selected);
-    printf("%d",combination(value,selected));  
-    return 0;  
-}
+    int num,a=-1,b=1,i,c=0;
+    printf("enter a number\n");
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    {
+        c=a+b;
+        printf("%d ",c);
+        a=b;
+        b=c;
+    }
+    
 
-int Factorial(int n)
-{
-    int i,Factorial=1;
-    for(i=1;i<=n;n--)
-    Factorial=Factorial*n;
-    return Factorial;
-}
-int combination(int n,int r)
-{
-    return Factorial(n)/(Factorial(r)*Factorial(n-r));  
 }

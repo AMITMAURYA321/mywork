@@ -1,19 +1,29 @@
-/* Write a function to print first N odd natural numbers. (TSRN)*/
-#include<stdio.h>
-int odd_natural_numbers(int);
+/*Write a function to print first N prime numbers (TSRN)*/
+void primnumber(int);
+#include <stdio.h>
 int main()
 {
-    int value;
-    printf("enter a value");
-    scanf("%d",&value);
-    odd_natural_numbers(value);
-
+    int n;
+    printf("enter a numbers\n=>");
+    scanf("%d",&n);
+    primnumber(n);
 }
-int odd_natural_numbers(int num)
+void primnumber(int num)
 {
-    int i;
-    for(i=1;i<=num;i++)
-
-        printf("%d\n",2*i-1);
+    int i,x=2,k;
+     for(k=1;k<num;num)
+    {
+        for(i=2;i<x;i++)
+        if(x%i==0)
+        break;
+        if(i==x)
+        {
+            printf("%d ",x);
+            num--;
+        }
+        x++;
+        
+    }
 
 }
+   

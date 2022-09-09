@@ -1,14 +1,13 @@
-// Write a program to calculate sum of squares of first N natural numbers.
+
 #include<stdio.h>
 int main()
 {
-    int num,i,s=0;
-    printf("entre a number");
-    scanf("%d",&num);
-    for(i=1;i<=num;i++)
-    {
-        s=s+i*i;
-    }
-    printf("%d",s);
-    return 0;
+    int num1,i=2,x;
+    printf("enter a number");
+    scanf("%d",num1);
+    for(i=2;i<num1;i++)
+    if(num1%i==0)
+    break;
+    if(i==num1)
+    printf("%d",num1+1);
 }

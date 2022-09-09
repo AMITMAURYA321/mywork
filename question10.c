@@ -1,25 +1,25 @@
-/* Write a function to check whether a given number contains a given digit or not.
-(TSRS)*/
+/* Write a program in C to find the sum of the series 1! /1+2!/2+3!/3+4!/4+5!/5 using the
+function.*/
 #include<stdio.h>
-int contains(int, int);
+int fatorial(int);
 int main()
 {
-    int num1,digit;
-    printf("Enter a number\n");
-    scanf("%d",&num1);
-    printf("Enter a digits");
-    scanf("%d",&digit);
-    printf("%d",contains(num1,digit));
+    int sum=0,i,num; 
+    printf("enter a number");
+    scanf("%d",&num);
+    for(i=1;i<=num;i++)
+    {
+        sum=sum+fatorial(i)/i;
+    }
+    printf("%d",sum);
     return 0;
 }
-int contains(int n, int d)
+int fatorial(int n)
 {
-   int i,remnder;
-   for(i=1;i<=n;n++)
-   remnder=n%10;
-   if(remnder==d)
-   {
-    return 0;   
-   }
-   return 1;
+    int fatorial=1,i;
+    for(i=1;i<=n;i++)
+    {
+        fatorial=fatorial*i;
+    }   
+        return fatorial ;
 }

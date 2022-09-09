@@ -1,30 +1,39 @@
-   /* Write a function to calculate the number of arrangements one can make from n items
-    and r selected at a time. (TSRS)*/
-   #include<stdio.h>
-   int Fact(int);
-   int permutations(int,int);
-   int main()
-   {
-      int num1,num2,arrangements;
-      printf("enter a value\n ");
-      scanf("%d",&num1);
-      printf("Enter a selection\n");
-      scanf("%d",&num2);
-      arrangements=permutations(num1,num2);
-      printf("%d",arrangements);
-      return 0;
-   }
-    int Fact(int num)
-   {
-      int i, Factorial=1;
-      for(i=1;i<=num;num--)
-      Factorial=Factorial*num;
-      return Factorial;
-   }
-    int permutations(int n,int r)
-   {
-      int total;
-      total=Fact(n)/Fact(r);
-      return total;
-   }
-   
+/*Write a function to print PASCAL Triangle. (TSRN)*/
+#include<stdio.h>
+int factorial(int);
+int combination(int,int);
+void pascal(int);
+int main()
+{  
+    int num1;
+    printf("enter a number");
+    scanf("%d",&num1);
+    pascal(num1);
+    return 0;    
+}
+int factorial(int n)
+{
+    int i,factorial=1;
+    for(i=1;i<=n;i++)
+    factorial=factorial*i;
+    return factorial;
+}
+int combination(int n,int r)
+{
+    return factorial(n)/(factorial(r)*factorial(n-r));
+}
+void pascal(int n)
+{
+    
+        int i,j;
+        for(i=0;i<=n;i++)
+        {
+            for(j=0;j<=i;j++)
+            {
+                printf("%d ",combination(i,j));
+            }
+            printf("\n");
+        }
+       
+
+}
