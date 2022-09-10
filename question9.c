@@ -1,18 +1,18 @@
-// Write a recursive function to print octal of a given decimal number.
+// Write a program in C to calculate the power of any number using recursion.
 #include<stdio.h>
-void octal_of_a_given_decimal_number(int n);
+int calculat_the_power(int,int);
 int main()
 {
-    int num;
-    printf("enter a number");
-    scanf("%d",&num);
-    octal_of_a_given_decimal_number(num);
+    int num1,num2;
+    printf("enter a two numbers");
+    scanf("%d%d",&num1,&num2);
+    calculat_the_power(num1,num2);
+    printf("===> %d",calculat_the_power(num1,num2));
     return 0;
 }
-void octal_of_a_given_decimal_number(int n)
+int calculat_the_power(int n,int m)
 {
-    if(n==0)
-    return;
-    octal_of_a_given_decimal_number(n/8);
-    printf("%d",n%8);
+    if(m==0)
+    return 1;
+    return n*calculat_the_power(n,m-1);
 }

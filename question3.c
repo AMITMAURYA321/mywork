@@ -1,17 +1,17 @@
-//Write a recursive function to print first N odd natural numbers
+// Write a recursive function to calculate sum of squares of first n natural numbers
 #include<stdio.h>
-void odd_natural(int n);
+int squares_natural_numbers(int);
 int main()
 {
     int num;
-    printf("enter a number\n=>");
+    printf("enter a number");
     scanf("%d",&num);
-    odd_natural(num);
+    printf("%d",squares_natural_numbers(num));
+    return 0;
 }
-void odd_natural(int n)
+int squares_natural_numbers(int n)
 {
-    if(n==0)
-    return;
-    odd_natural(n-1);
-    printf("%d ",2*n-1);
+    if(n==1)
+    return 1;
+    return n*n+squares_natural_numbers(n-1);
 }

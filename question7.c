@@ -1,17 +1,22 @@
-/* Write a function to print first N terms of Fibonacci series (TSRN)*/
+//Write a recursive function to print first N terms of Fibonacci series
 #include<stdio.h>
+int fib(int n)
+{
+  if(n==0||n==1)
+  return n;
+  return fib(n-1)+fib(n-2);
+}
+int fib(int);
 int main()
 {
-    int num,a=-1,b=1,i,c=0;
-    printf("enter a number\n");
+    int num,i;
+    printf("enter a numbers");
     scanf("%d",&num);
-    for(i=1;i<=num;i++)
+    for(i=0;i<num;i++)
     {
-        c=a+b;
-        printf("%d ",c);
-        a=b;
-        b=c;
+       printf("%d ",fib(i));
+
     }
-    
+    return 0;
 
 }

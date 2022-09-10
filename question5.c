@@ -1,29 +1,16 @@
-/*Write a function to print first N prime numbers (TSRN)*/
-void primnumber(int);
-#include <stdio.h>
+//Write a recursive function to calculate factorial of a given number.
+#include<stdio.h>
+int factorial(int);
+int factorial(int n)
+{
+  if(n==1)
+  return 1;
+  return n*factorial(n-1);
+}
 int main()
 {
-    int n;
-    printf("enter a numbers\n=>");
-    scanf("%d",&n);
-    primnumber(n);
+    int num;
+    printf("enter a number");
+    scanf("%d",&num);
+    printf("%d", factorial(num));
 }
-void primnumber(int num)
-{
-    int i,x=2,k;
-     for(k=1;k<num;num)
-    {
-        for(i=2;i<x;i++)
-        if(x%i==0)
-        break;
-        if(i==x)
-        {
-            printf("%d ",x);
-            num--;
-        }
-        x++;
-        
-    }
-
-}
-   

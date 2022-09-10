@@ -1,18 +1,16 @@
-// Write a recursive function to print binary of a given decimal number.
+// Write a program in C to count the digits of a given number using recursion.
 #include<stdio.h>
-void binary_of_a_given_decimal_number(int n);
+int digits(int);
 int main()
-{
-    int num;
-    printf("enter a number");
+{int num, count;
+    printf("enter a digits");
     scanf("%d",&num);
-    binary_of_a_given_decimal_number(num);
-    return 0;
-}
-void binary_of_a_given_decimal_number(int n)
+   count=digits(num);
+   printf(" total digitd ==> %d",count);
+} 
+int digits(int n)
 {
-    if(n==0)
-    return;
-    printf("%d",n&1);
-    binary_of_a_given_decimal_number(n>>1);
-}
+    if(n<10)
+    return 1;
+   return 1+digits(n/10);
+}  
