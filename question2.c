@@ -1,17 +1,18 @@
-//Write a recursive function to print first N natural numbers in reverse order
+/*Write a program to calculate the average of numbers stored in an array of size 10.
+Take array values from the user.*/
 #include<stdio.h>
-void natural_numbers_in_reverse(int n);
 int main()
 {
-    int num;
-    printf("enter a number\n=>");
-    scanf("%d",&num);
-    natural_numbers_in_reverse(num);
-}
-void natural_numbers_in_reverse(int n)
-{
-    if(n==0)
-    return;
-    printf("%d ",n);
-    natural_numbers_in_reverse(n-1);
+    int num[10],i,sum=0;
+    float avg;
+    printf("Enter a 10 numbers\n");
+    for(i=0;i<=9;i++)
+    scanf("%d",&num[i]);
+    for(i=0;i<=9;i++)
+    {
+        sum=sum+num[i];
+    }
+    avg=sum/10.0;
+    printf("10 number avrage %f",avg);
+    return 0;
 }

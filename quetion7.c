@@ -1,17 +1,27 @@
-// Write a recursive function to print squares of first N natural numbers;
+/*Write a program to find second largest in an array.Take array values from the user.*/
 #include<stdio.h>
-void squares_of_first_N_natural(int);
 int main()
 {
-    int num;
-    printf("enter a anumber");
-    scanf("%d",&num);
-    squares_of_first_N_natural(num);
-}
-void squares_of_first_N_natural(int n)
-{
-    if(n==0)
-    return;
-    squares_of_first_N_natural(n-1);
-    printf("%d ",n*n);
+    int num[10],i,j,temp;
+    printf("enter a 10 number\n");
+    for(i=0;i<=9;i++)
+    scanf("%d",&num[i]);
+    for(i=0;i<=9;i++)
+    {    
+     for(j=i+1;j<10;j++)
+     {
+        if(num[i]>num[j])
+        {
+            temp=num[i];
+            num[i]=num[j];
+            num[j]=temp;
+        }
+        
+     }
+    }
+    for(i=8;i<9;i++)
+        {
+            printf("second large %d ",num[i]);
+        }
+        return 0;
 }

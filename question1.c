@@ -1,18 +1,16 @@
-//Write a recursive function to calculate sum of first N natural numbers.
+/* Write a program to calculate the sum of numbers stored in an array of size 10. Take
+array values from the user.*/
 #include<stdio.h>
-int sum(int n);
 int main()
 {
-    int num;
-    printf("enter a number\n");
-    scanf("%d",&num);
-   printf("%d",sum(num)) ;
-}
-int sum(int n)
-{
-    int s;
-    if(n==1)
-    return 1;
-   s=n+sum(n-1);
-    return s;
+    int num[10],i,sum=0;
+    printf("enter 10 number\n");
+    for(i=0;i<=9;i++)
+    scanf("%d",&num[i]);
+    for(i=0;i<=9;i++)
+    {
+        sum=sum+num[i];
+    }
+    printf("%d ",sum);
+    return 0;
 }

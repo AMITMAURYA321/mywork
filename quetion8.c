@@ -1,5 +1,5 @@
-/*Write a program to sort elements of an array of size 10. Take array values from the
-user.*/
+/*Write a program to find the second smallest number in an array.Take array values
+from the user.*/
 #include<stdio.h>
 int main()
 {
@@ -11,7 +11,7 @@ int main()
     {    
      for(j=i+1;j<10;j++)
      {
-        if(num[i]>num[j])
+        if(num[i]<num[j])
         {
             temp=num[i];
             num[i]=num[j];
@@ -20,9 +20,9 @@ int main()
         
      }
     }
-    for(i=0;i<10;i++)
+    for(i=8;i<9;i++)
         {
-            printf("%d ",num[i]);
+            printf("second smallest number %d ",num[i]);
         }
         return 0;
 }

@@ -1,16 +1,16 @@
-//Write a recursive function to calculate factorial of a given number.
+/*Write a program to find the smallest number stored in an array of size 10. Take array
+values from the user.*/
 #include<stdio.h>
-int factorial(int);
-int factorial(int n)
-{
-  if(n==1)
-  return 1;
-  return n*factorial(n-1);
-}
 int main()
 {
-    int num;
-    printf("enter a number");
-    scanf("%d",&num);
-    printf("%d", factorial(num));
+    int num[10],i,min;
+    printf("enter a 10 number");
+    for(i=0;i<=9;i++)
+    scanf("%d",&num[i]);
+    for(i=0;i<=9;i++)
+    {
+    if(min>num[i])
+    min=num[i];
+    }
+    printf("minmum number %d",min);
 }

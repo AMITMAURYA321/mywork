@@ -1,15 +1,17 @@
-//Write a recursive function to calculate sum of digits of a given number
+/* Write a program to find the greatest number stored in an array of size 10. Take array
+values from the user.*/
 #include<stdio.h>
-int sum_of_digits(int);
 int main()
-{int num;
-    printf("enter a digits");
-    scanf("%d",&num);
-    printf("%d",sum_of_digits(num));
-} 
-int sum_of_digits(int n)
 {
-    if(n==0)
-    return 0;
-   return (n%10)+sum_of_digits(n/10);
-}  
+    int num[10],i,max=0;
+    printf("enter a 10 numbers\n");
+    for(i=0;i<=9;i++)
+    scanf("%d",&num[i]);
+    for(i=0;i<=9;i++)
+    {
+        if(max<num[i])
+        max=num[i];
+    }
+    printf("%d maxium number\n",max);
+
+}
