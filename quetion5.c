@@ -1,17 +1,25 @@
-// Write a recursive function to print first N even natural numbers.
+/*Write a function to find the first occurrence of adjacent duplicate values in the array.
+Function has to return the value of the element.*/
 #include<stdio.h>
-void even_natural();
+void input(int b[],int n);
 int main()
 {
-    int num;
-    printf("enter a number");
-    scanf("%d",&num);
-    even_natural(num);
+    int size;
+    printf("Enter size= ");
+    scanf("%d",&size);
+    int a[size];
+    input(a,size);
 }
-void even_natural(int n)
+void input(int b[],int n)
 {
-    if(n==0)
-    return;
-    even_natural(n-1);
-    printf("%d ",n*2);
+    int i;
+    printf("Enter %d number\n",n);
+    for(i=0;i<=n-1;i++)
+    scanf("%d",&b[i]); 
+    printf("first occurrence of adjacent duplicate values ==> ");
+    for(i=0;i<=n-1;i++)
+    {
+        if(b[i]==b[i+1])
+        printf("%d ",b[i]); 
+    }   
 }

@@ -1,19 +1,21 @@
-// Write a recursive function to calculate sum of first N odd natural numbers.
+/*Write a function to find the smallest number from the given array of any size.*/
 #include<stdio.h>
-int sum_odd_natural(int);
+void  greatest_number(int []);
 int main()
 {
-    int num ,total;
-    printf("enter a number");
-    scanf("%d",&num);
-    total=sum_odd_natural(num);
-    printf("%d",total);
-    return 0;
+    int b[10],i;
+    printf("enter a 10 numbers\n");
+    for(i=0;i<=9;i++)
+    scanf("%d",&b[i]);
+   greatest_number(b);
 }
-int sum_odd_natural(int n)
+void  greatest_number(int a[])
 {
-    if(n==1)
-    return 1;   
-    return 2*n-1+sum_odd_natural(n-1);
-
+    int i,max;
+    for(i=1;i<=9;i++)
+    {
+        if(max>a[i])
+        max=a[i];
+    }
+    printf("smallest numbe %d",max);
 }

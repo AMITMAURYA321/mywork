@@ -1,16 +1,27 @@
-// Write a program in C to count the digits of a given number using recursion.
+//Write a function in C to print all unique elements in an array.
 #include<stdio.h>
-int digits(int);
+void count(int b[],int n);
 int main()
-{int num, count;
-    printf("enter a digits");
-    scanf("%d",&num);
-   count=digits(num);
-   printf(" total digitd ==> %d",count);
-} 
-int digits(int n)
-{
-    if(n<10)
-    return 1;
-   return 1+digits(n/10);
-}  
+  
+ {
+    int size;
+    printf("enter size==>");
+    scanf("%d",&size);
+    int a[size];
+    count(a,size);
+ }
+ void count(int b[],int n)
+ {
+    int i,j,count;
+    printf("enter %d number\n",n);
+    for(i=0;i<=n-1;i++)
+    scanf("%d",&b[i]);
+    for(i=0;i<=n-1;i++)
+    {
+        for(j=i+1;j<=n-1;j++)
+        if(b[i]==b[j]&&i!=j)
+        count++;
+    }
+    printf("%d",count);
+ }
+

@@ -1,18 +1,24 @@
-// Write a recursive function to print first N even natural numbers in reverse order.
+/*Write a function in C to read n number of values in an array and display it in reverse
+order.*/
 #include<stdio.h>
-void reverse_natural_numbers(int n);
+void reverse(int b[],int n);
 int main()
 {
-    int num;
-    printf("enter a number");
-    scanf("%d",&num);
-    reverse_natural_numbers(num);
-    return 0;
+    int size;
+    printf("Enter size ==>");
+    scanf("%d",&size);
+    int a[size];
+    reverse(a,size);
 }
-void reverse_natural_numbers(int n)
+void reverse(int b[],int n)
 {
-    if(n==0)
-    return;
-    printf("%d ",n*2);
-    reverse_natural_numbers(n-1);
+    int i;
+    printf("enter %d numbers \n",n);
+     for(i=0;i<=n-1;i++)
+     scanf("%d",&b[i]);
+     printf("Reverse Order ==> ");
+     for(i=n-1;i>=0;i--)
+     {
+        printf("%d ",b[i]);
+     }
 }

@@ -1,17 +1,25 @@
-//Write a recursive function to print first N odd natural numbers in reverse order
+/*Write a function to rotate an array by n position in d direction. The d is an indicative
+value for left or right. (For example, if array of size 5 is [32, 29, 40, 12, 70]; n is 2 and
+d is left, then the resulting array after left rotation 2 times is [40, 12, 70, 32, 29] )*/
 #include<stdio.h>
-void odd_natural(int n);
 int main()
 {
-    int num;
-    printf("enter a number");
-    scanf("%d",&num);
-    odd_natural(num);
-}
-void odd_natural(int n)
-{
-    if(n==0)
-    return;
-    printf("%d \n",2*n-1);
-    odd_natural(n-1);
+  int a[5]={1,2,3,4,5};
+  int d=2,i;
+  while (d!=0)
+  {
+    int temp=a[4];
+    for(i=4;i>0;i--)
+    {
+      a[i]=a[i-1];
+    }
+    a[0]=temp;
+    d--;
+  }
+  for(i=0;i<5;i++)
+  {
+    printf("%d ",a[i]);
+  }
+  return 0;
+  
 }

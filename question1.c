@@ -1,16 +1,21 @@
-/* Write a program to calculate the sum of numbers stored in an array of size 10. Take
-array values from the user.*/
+/*Write a function to find the greatest number from the given array of any size. (TSRS)*/
 #include<stdio.h>
+void  greatest_number(int []);
 int main()
 {
-    int num[10],i,sum=0;
-    printf("enter 10 number\n");
+    int b[10],i;
+    printf("enter a 10 numbers\n");
     for(i=0;i<=9;i++)
-    scanf("%d",&num[i]);
-    for(i=0;i<=9;i++)
+    scanf("%d",&b[i]);
+   greatest_number(b);
+}
+void  greatest_number(int a[])
+{
+    int i,max;
+    for(i=1;i<=9;i++)
     {
-        sum=sum+num[i];
+        if(max<a[i])
+        max=a[i];
     }
-    printf("%d ",sum);
-    return 0;
+    printf("greatest numbe %d",max);
 }

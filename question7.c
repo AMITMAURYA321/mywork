@@ -1,22 +1,27 @@
-//Write a recursive function to print first N terms of Fibonacci series
+//Write a function in C to count a total number of duplicate elements in an array.
+// ye quetion mai error hai so this question work pendding.
 #include<stdio.h>
-int fib(int n)
-{
-  if(n==0||n==1)
-  return n;
-  return fib(n-1)+fib(n-2);
-}
-int fib(int);
+void count(int b[],int n);
 int main()
-{
-    int num,i;
-    printf("enter a numbers");
-    scanf("%d",&num);
-    for(i=0;i<num;i++)
+  
+ {
+    int size;
+    printf("enter size==>");
+    scanf("%d",&size);
+    int a[size];
+    count(a,size);
+ }
+ void count(int b[],int n)
+ {
+    int i,j,count;
+    printf("enter %d number\n",n);
+    for(i=0;i<=n-1;i++)
+    scanf("%d",&b[i]);
+    for(i=0;i<=n-1;i++)
     {
-       printf("%d ",fib(i));
-
+        for(j=i+1;j<=n-1;j++)
+        if(b[i]==b[j])
+        count++;
     }
-    return 0;
-
-}
+    printf("duplicate elements in an array %d ",count);
+ }
