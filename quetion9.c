@@ -1,18 +1,31 @@
-/*Program to Convert even number into its upper nearest odd number
-Switch Statement.*/
+//Write a C program to sort a string array in ascending order.
+#include<stdio.h>
 #include<stdio.h>
 int main()
 {
-    int num;
-    printf("enter a number");
-    scanf("%d",&num);
-    switch(num%2==0)
-    {
-     case 1: printf("%d",num+1);
-     break;
-     case 0: printf("%d",num);
-     break;   
-    
-    }
-    return 0;
+      char a[100];
+      printf("enter your name");
+      fgets(a,100,stdin);
+      int i,j,sort=0;
+     for(i=0;i<a[i];i++)
+     {
+        for(j=0;j<=a[i];j++)
+        {
+            if(a[i]<a[j])
+            {
+              sort=a[i];
+              a[i]=a[j];
+              a[j]=sort;
+            }
+        }
+
+     }
+     for(i=0;i<=a[i];i++)
+     {
+
+        printf("%c",a[i]);
+     }
+     return 0;
 }
+
+

@@ -1,25 +1,20 @@
-/*Write a function to find the first occurrence of adjacent duplicate values in the array.
-Function has to return the value of the element.*/
+//Write a program to convert a given string into lowercase
 #include<stdio.h>
-void input(int b[],int n);
+#include<string.h>
 int main()
 {
-    int size;
-    printf("Enter size= ");
-    scanf("%d",&size);
-    int a[size];
-    input(a,size);
-}
-void input(int b[],int n)
-{
     int i;
-    printf("Enter %d number\n",n);
-    for(i=0;i<=n-1;i++)
-    scanf("%d",&b[i]); 
-    printf("first occurrence of adjacent duplicate values ==> ");
-    for(i=0;i<=n-1;i++)
-    {
-        if(b[i]==b[i+1])
-        printf("%d ",b[i]); 
-    }   
+    char name[100];
+    printf("enter your name in capital letters\n");
+    fgets(name,100,stdin);
+    while(name[i]!='\0')
+   {
+         if(name[i]>='A'&&name[i]<='Z')
+       {
+        name[i]=name[i]+32;
+       }
+       i++;
+    }
+    printf("uppercase ==> %s",name);
+    return 0;
 }

@@ -1,21 +1,20 @@
-/*Write a function to find the smallest number from the given array of any size.*/
+//Write a program to count the occurrence of a given character in a given string.
 #include<stdio.h>
-void  greatest_number(int []);
 int main()
 {
-    int b[10],i;
-    printf("enter a 10 numbers\n");
-    for(i=0;i<=9;i++)
-    scanf("%d",&b[i]);
-   greatest_number(b);
-}
-void  greatest_number(int a[])
-{
-    int i,max;
-    for(i=1;i<=9;i++)
-    {
-        if(max>a[i])
-        max=a[i];
+    int i=0,count=0;
+    char a[300];
+    char x;
+    printf("enter  your name\n");
+    fgets(a,300,stdin);
+    printf("enter a character\n");
+    scanf("%c",&x);
+    while (a[i]!='\0')
+    { i++;
+        if(a[i]==x)
+        count++;
     }
-    printf("smallest numbe %d",max);
+    printf("count the occurrence of a given character in a given string== %d",count+1);
+    return 0;
+    
 }
