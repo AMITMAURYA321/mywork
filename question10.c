@@ -1,18 +1,26 @@
-//Write a function in C to count the frequency of each element of an array.
+//Create an authentication system. It should be menu driven.
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int a[10]={3,4,5,3,5,6,7,8,9,9};
-    int freq[100]={0},i;
-
-    for(i=0;i<10;i++)
-    {
-        freq[a[i]]++;
-    }
-    for(i=0;i<100;i++)
-    {
-        if(freq[i]!=0)
-        printf("%d==>%d\n",i,freq[i]);
-    }
-    return 0;
+    int i,j,flag;
+    char  a[3][2][20],username[20],password[20];
+    printf("ENTER USERNAME");
+     for(i=0;i<3;i++)
+     {
+        gets(a[i][2][20]);
+     }
+   printf("ENTER USER NAME");
+   gets(username);
+   printf("ENTER PASSWORD");
+   gets(password);
+   for(i=0;i<3;i++)
+   {
+    if(strcmp(username,a[i][0]==0)&& strcmp(password,a[i][1])==0)
+    printf("LOGIN SUCCECCFUL");
+    flag=1;
+   }
+   if(flag==0)
+   printf("USERNAME AND PASSWORD NOT MATCH");
+   return 0;
 }

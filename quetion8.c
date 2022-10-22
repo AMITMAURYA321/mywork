@@ -1,34 +1,36 @@
-//Write a program to convert a given string into uppercase
+/*Given a list of words followed by two words, the task is to find the minimum distance
+between the given two words in the list of words.
+(Example : s = {“the”,”quick”,”brown”,”fox”,”quick”}
+word1 = “the”, word2 = “fox”, OUTPUT : 2 )*/
 #include<stdio.h>
 #include<string.h>
-void up(char name[]);
+#include<stdlib.h>
 int main()
 {
-    int i;
-    char a[100];
-    printf("enter your name\n");
-    fgets(a,100,stdin);
-    up(a);
-};
-void up(char b[])
-{
-    int i,word=0,space=0,
-    l=strlen(b);
-    for(i=0;i<l;i++)
+    int i,w1= -1,w2= -1,min=1000,temp;
+    char word[4][20],word1[20],word2[20];
+    printf("\nENTER STRING\n");
+    for(i=0;i<4;i++)
     {
-        if(b[i]!=' '&& b[i]!='\t')
-        {
-            word++;
-
-            while(b[i]!=' ' && b[i]!=' \t')
-         {
-            i++;
-         }
-        }
-        space++;
+        gets(word[i]);
     }
-    space--;
-    printf("\nNUMBER OF WORDS %d",word);
-    printf("\nNUMBER OF SPACE %d",space);
-
+    printf("ENTER WORD1");
+    gets(word1);
+    printf("ENTER WORD2");
+    gets(word2);
+    for(i=0;i<4;i++)
+    {
+        if(strcmp(word[i],word1)==0)
+            w1=i;
+        if(strcmp(word[i],word2)==0)
+            w2=i;
+        if(w1!=-1&&w2!=-1)
+        {
+            temp= abs (w2-w1);
+            if(temp<min)
+                min=temp;
+        }
+    }
+     printf("%d",min-1);
+        return 0;
 }

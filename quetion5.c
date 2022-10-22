@@ -1,26 +1,22 @@
-//Write a program to convert a given string into lowercase.
+/*Suppose we have a list of email addresses, check whether all email addresses have
+‘@’ in it. Print the odd email out.*/
 #include<stdio.h>
 #include<string.h>
-void lowercase(char a[]);
 int main()
 {
     int i;
-    char a[100];
-    printf("enter your name\n");
-    fgets(a,100,stdin);
-    lowercase(a);
-}
-void lowercase(char name[])
-{
-    int i;
-
-    while(name[i]!='\0')
-   {
-         if(name[i]>='A'&&name[i]<='Z')
-       {
-        name[i]=name[i]+32;
-       }
-       i++;
+    char a[5][20];
+    printf("\nENTER EMAIL ENTER\n");
+    for(i=0;i<5;i++)
+    {
+        gets(a[i]);
     }
-    printf("LOWERCASE ==> %s",name);
+    for(i=0;i<5;i++)
+    {
+        if(strchr(a[i],'@')!=0)
+        {
+           printf("%s\n",a[i]);
+        }
+
+    }
 }

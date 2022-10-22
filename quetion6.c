@@ -1,30 +1,24 @@
-/*Write a function to check whether a given string is an alphanumeric string or not.
-(Alphanumeric string must contain at least one alphabet and one digit)*/
+//Write a program to print the strings which are palindrome in the list of strings.
 #include<stdio.h>
 #include<string.h>
-void alphanumeric(char b[]);
 int main()
 {
-    char a[100];
-    printf("ENTER STRING\n");
-    gets(a);
-    alphanumeric(a);
-}
-void alphanumeric(char b[])
-{
-    int i,D=0,A=0;
-    for(i=0;b[i];i++)
+    int i,len=0,flag=0;
+    char str[20];
+    printf("ENTER STRING");
+    gets(str);
+    len=strlen(str);
+    for(i=0;i<len;i++)
     {
-        if(b[i]>='a'&&b[i]<='z' || b[i]>='A'&& b[i]<='Z')
-
-          A=1;
-
-         if(b[i]>='0'&&b[i]<='9')
-
-          D=1;
+        if(str[i]!=str[len-i-1])
+        {
+            flag=1;
+            break;
+        }
     }
-         if(A==1&&D==1)
-         printf("ALPHANUMERIC STRING");
-         else
-         printf("NOT ALPHANUMERIC STRING");
+    if (flag==0)
+     printf("STRING IS PALINDRAM");
+    else
+     printf("STRING IS NOT PALINDRAM");
+    return 0;
 }

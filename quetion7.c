@@ -1,17 +1,15 @@
-//Write a function to check whether a given string is palindrome or not.
+// From the list of IP addresses, check whether all ip addresses are valid.
 #include<stdio.h>
 #include<string.h>
 int main()
 {
-    char str[20],str2[20];
-    printf("ENTER STRING: ");
-    gets(str);
-    strcpy(str2,str);
-    strrev(str2);
-    if(strcmp(str,str2)==0)
-    printf("STRING IS PALINDROME");
-    else
-        printf("STRING IS NOT PALINDROME");
-
-    return 0;
+    char ip[]={"23.145.23.44"};
+    char*a=strtok(ip,".");
+    while (a!=NULL)
+    {
+      int x= atoi(a);
+      if((x>=0)&&(x<=255))
+      printf("%d ",x);
+      a=strtok(NULL,".");
+    }
 }

@@ -1,34 +1,29 @@
-//Write a function to reverse a string.
-#include<stdio.h>
-#include<string.h>
+/* Write a program to sort 10 city names stored in two dimensional arrays, taken from
+the user.*/
 int main()
 {
-    int i;
-    char rev[100];
-    printf("\nenter your name AMIT");
-    fgets(rev,100,stdin);
-    printf("%s",strrev(rev));
-    return 0;
-}
-
-// without using function;
-/*
-#include<stdio.h>
-#include<string.h>
-int main()
-{
-    char a[20];
-    int i,l,cha;
-    printf("\nENTER A STRING");
-    fgets(a,20,stdin);
-    for(l=0;a[l];l++);
-    for(i=0;i<=l/2;i++)
+    int i,j;
+    char sort[10][20],t[30];
+    for(i=0;i<10;i++)
     {
-        cha=a[i];
-        a[i]=a[l-1-i];
-        a[l-1-i]=cha;
+        sort[i];
     }
-    printf("REVERSE STRING IS %s ",a);
-}*/
+    for(i=0;i<9;i++)
+    {
+        for(j+i;j<10;j++)
+        {
+            if(strcmp(sort[i],sort[j]>0))
+            {
+                strcpy(t,sort[i]);
+                strcpy(sort[i],sort[j]);
+                strcpy(sort[j],t);
+            }
+        }
+     
+    }
+    for(i=0;i<10;i++)
+    printf("%s\n",sort[i]);
+    return 0;
 
 
+}
