@@ -1,12 +1,19 @@
-//Write a program to convert a given string into lowercase
+//Write a program to convert a given string into lowercase.
 #include<stdio.h>
 #include<string.h>
+void lowercase(char a[]);
 int main()
 {
     int i;
-    char name[100];
-    printf("enter your name in capital letters\n");
-    fgets(name,100,stdin);
+    char a[100];
+    printf("enter your name\n");
+    fgets(a,100,stdin);
+    lowercase(a);
+}
+void lowercase(char name[])
+{
+    int i;
+
     while(name[i]!='\0')
    {
          if(name[i]>='A'&&name[i]<='Z')
@@ -15,6 +22,5 @@ int main()
        }
        i++;
     }
-    printf("uppercase ==> %s",name);
-    return 0;
+    printf("LOWERCASE ==> %s",name);
 }

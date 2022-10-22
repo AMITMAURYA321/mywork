@@ -1,20 +1,34 @@
-//Write a program to count the occurrence of a given character in a given string.
+//Write a function to reverse a string.
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int i=0,count=0;
-    char a[300];
-    char x;
-    printf("enter  your name\n");
-    fgets(a,300,stdin);
-    printf("enter a character\n");
-    scanf("%c",&x);
-    while (a[i]!='\0')
-    { i++;
-        if(a[i]==x)
-        count++;
-    }
-    printf("count the occurrence of a given character in a given string== %d",count+1);
+    int i;
+    char rev[100];
+    printf("\nenter your name AMIT");
+    fgets(rev,100,stdin);
+    printf("%s",strrev(rev));
     return 0;
-    
 }
+
+// without using function;
+/*
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[20];
+    int i,l,cha;
+    printf("\nENTER A STRING");
+    fgets(a,20,stdin);
+    for(l=0;a[l];l++);
+    for(i=0;i<=l/2;i++)
+    {
+        cha=a[i];
+        a[i]=a[l-1-i];
+        a[l-1-i]=cha;
+    }
+    printf("REVERSE STRING IS %s ",a);
+}*/
+
+

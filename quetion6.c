@@ -1,19 +1,30 @@
-//Write a program to reverse a string.
+/*Write a function to check whether a given string is an alphanumeric string or not.
+(Alphanumeric string must contain at least one alphabet and one digit)*/
 #include<stdio.h>
 #include<string.h>
+void alphanumeric(char b[]);
 int main()
 {
-    char a[100],temp=0;
-    int i=0,j=strlen(a);
-    printf("enter your name\n");
-    fgets(a,100,stdin);
-    while(i<=j)
+    char a[100];
+    printf("ENTER STRING\n");
+    gets(a);
+    alphanumeric(a);
+}
+void alphanumeric(char b[])
+{
+    int i,D=0,A=0;
+    for(i=0;b[i];i++)
     {
-        temp=a[i];
-        a[i]=a[j];
-        a[j]=temp;
-        i++;
-        j--;
+        if(b[i]>='a'&&b[i]<='z' || b[i]>='A'&& b[i]<='Z')
+
+          A=1;
+
+         if(b[i]>='0'&&b[i]<='9')
+
+          D=1;
     }
-    printf("%s",a);
+         if(A==1&&D==1)
+         printf("ALPHANUMERIC STRING");
+         else
+         printf("NOT ALPHANUMERIC STRING");
 }

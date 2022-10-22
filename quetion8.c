@@ -1,17 +1,34 @@
-//Write a program in C to copy one string to another string.
+//Write a program to convert a given string into uppercase
 #include<stdio.h>
 #include<string.h>
+void up(char name[]);
 int main()
 {
-    int i,j=0;
+    int i;
     char a[100];
-    char b[100];
-    printf("\nenter your name ");
+    printf("enter your name\n");
     fgets(a,100,stdin);
-    for(i=0;a[i]!='\0';i++)
+    up(a);
+};
+void up(char b[])
+{
+    int i,word=0,space=0,
+    l=strlen(b);
+    for(i=0;i<l;i++)
     {
-        b[j++]=a[i];
+        if(b[i]!=' '&& b[i]!='\t')
+        {
+            word++;
+
+            while(b[i]!=' ' && b[i]!=' \t')
+         {
+            i++;
+         }
+        }
+        space++;
     }
-    b[j++]='\0';
-    printf("copy string= %s",b);
+    space--;
+    printf("\nNUMBER OF WORDS %d",word);
+    printf("\nNUMBER OF SPACE %d",space);
+
 }
